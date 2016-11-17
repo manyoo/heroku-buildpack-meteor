@@ -65,12 +65,6 @@ build() {
     head "Installing App's NPM Dependencies"
     (cd ../build/bundle/programs/server && npm install 2>&1 | indent)
     cd $BUILD_DIR && rm -rf $APP_SOURCE
-    
-    echo "Build RSVG+PDFTK"
-    apt-get install librsvg2-bin -y --force-yes
-    echo "done rsvg"
-    apt-get install pdftk -y --force-yes
-    echo "done pdftk"
   )
 }
 
